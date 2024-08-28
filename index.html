@@ -33,6 +33,7 @@
         .content h1 {
             margin: 0;
             font-size: 24px;
+            text-align: center;
         }
         .content p {
             font-size: 18px;
@@ -79,7 +80,8 @@
             var password = document.getElementById('password').value;
             var name = document.getElementById('name').value;
             if (password === "FriesAreTastyButPizzaIsLove!") {
-                window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=rkrashik@gmail.com&su=Shhh...%20I%20Know%20the%20Secret!&body=Hello%2C%20Game%20Master%2C%0D%0A%0D%0AGuess%20what%3F%20I've%20cracked%20the%20code%2C%20and%20it's%20...%20" + encodeURIComponent(password) + "%21%20%F0%9F%8E%89%0D%0A%0D%0ANow%2C%20I%20know%20you're%20dying%20to%20know%20if%20I%20got%20it%20right.%20Can%20you%20check%20it%20out%20and%20confirm%20I'm%20the%20ultimate%20detective%3F%0D%0A%0D%0ACheers%2C%0D%0A" + encodeURIComponent(name);
+                var mailtoLink = "https://mail.google.com/mail/?view=cm&fs=1&to=rkrashik@gmail.com&su=Shhh...%20I%20Know%20the%20Secret!&body=Hello%2C%20Game%20Master%2C%0D%0A%0D%0AGuess%20what%3F%20I've%20cracked%20the%20code%2C%20and%20it's%20...%20" + encodeURIComponent(password) + "%21%20%F0%9F%8E%89%0D%0A%0D%0ANow%2C%20I%20know%20you're%20dying%20to%20know%20if%20I%20got%20it%20right.%20Can%20you%20check%20it%20out%20and%20confirm%20I'm%20the%20ultimate%20detective%3F%0D%0A%0D%0ACheers%2C%0D%0A" + encodeURIComponent(name);
+                window.location.href = mailtoLink;
             } else {
                 alert("Oops! The password is incorrect. Please try again!");
             }
